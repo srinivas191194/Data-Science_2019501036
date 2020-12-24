@@ -12,7 +12,7 @@ for(i in 2:10) {
   c2[i] = mean(second_cluster)
 }
 
-first_cluster
-second_cluster
+print(first_cluster)
+print(second_cluster)
 
 kmeans(x,2)

@@ -26,3 +26,8 @@ round(val, 3)
 
 depth = error[which.min(error[,3]), 1]
 depth
+library(rpart)
+library(rpart.plot)
+
+model <- rpart(y_test~.,x_test,control=rpart.control(minsplit=0,minbucket=0,cp=-1, maxcompete=0, maxsurrogate=0, usesurrogate=0, xval=0,maxdepth=5))
+rpart.plot(model, box.palette="RdBu", shadow.col="orange", nn=TRUE,border="red",col="black")

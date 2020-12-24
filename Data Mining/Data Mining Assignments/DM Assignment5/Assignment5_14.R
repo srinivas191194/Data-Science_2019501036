@@ -9,4 +9,5 @@ interQuantile
 
 data[(data$Midterm.2 > q3 + 1.5 * interQuantile), 3]
 data[(data$Midterm.2 > q1 - 1.5 * interQuantile), 3]
-boxplot(data$Midterm.2, col = "Red", main="Exam Scores", xlab=("Exam 2"), ylab = "Exam Score")
+#boxplot(data$Midterm.2, col = "Red", main="Exam Scores", xlab=("Exam 2"), ylab = "Exam Score")
+boxplot(data$Midterm.1,data$Midterm.2, col="yellow", main="Exam Scores", names=c("Exam 1 ","Exam 2"),ylab="Exam Score")
